@@ -12,12 +12,13 @@ function makeGrid() {
     
 }
 
+// TODO : fire makeGrid() function when submit form
 $( "#sizePicker" ).submit(function( event ) {
   makeGrid();
   event.preventDefault();
 });
 
-
+// TODO : make cell colored when event fired 
 $("#pixel_canvas").on('click' , ".data", function () {
     color = document.getElementById("colorPicker").value;
     $(event.target).css("background-color" , color);
