@@ -18,3 +18,7 @@ $( "#sizePicker" ).submit(function( event ) {
 });
 
 
+$("#pixel_canvas").on('click' , ".data", function () {
+    color = document.getElementById("colorPicker").value;
+    $(event.target).css("background-color" , color);
+});
