@@ -1,10 +1,20 @@
-// Select color input
-// Select size input
-
-// When size is submitted by the user, call makeGrid()
-
 function makeGrid() {
 
-// Your code goes here!
+    const num_of_cells = document.getElementById("input_width").value,
+          num_of_raws = document.getElementById("input_height").value,
+          table = $("#pixel_canvas"); 
 
+    for(let x = 0 ; x<num_of_raws ; x++){
+        let td = "<td class='data'></td>";
+        let tr = `<tr> ${td.repeat(num_of_cells)} </tr>`;
+        table.append(tr);
+    }
+    
 }
+
+$( "#sizePicker" ).submit(function( event ) {
+  makeGrid();
+  event.preventDefault();
+});
+
+
